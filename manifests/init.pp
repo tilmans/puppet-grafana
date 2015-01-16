@@ -98,6 +98,7 @@ class grafana (
       checksum => false,
       target   => $install_dir,
       url      => $download_url,
+      timeout  => 600,
     }
 
     $require_target = Archive["grafana-${version}"]
